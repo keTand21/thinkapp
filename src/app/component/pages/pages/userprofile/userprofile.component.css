@@ -1,0 +1,18 @@
+
+  
+.pading{
+    margin: 100px;
+}
+table, th, td {
+   margin: 10px;
+  }
+
+  .header{
+    font-weight: bold;font-size:14px;
+}
+.demo-button{
+    left: 1324px;
+}
+.table{
+    width: 98%; margin: 15px;
+}

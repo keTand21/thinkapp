@@ -1,0 +1,13 @@
+<ng-container *ngFor="let i of [0,1,2,3]" >
+	<div *ngIf="i==index && !loading" [@flyInOut] [ngClass]="'background div'+i">
+	</div>
+</ng-container>
+<div *ngIf="loading" class="background div0"></div> 
+
+
+<div class="size">
+   <button mat-raised-button color="primary" (click)="additem()" class="item">Add new item</button>
+</div>
+<div style="background-color:#f8f9fa; height: 250px;   border-top: solid #23ade4;" >
+
+</div>

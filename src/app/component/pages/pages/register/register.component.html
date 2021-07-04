@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="col-md-12">
+        <form [formGroup]="registerForm" >
+            <mat-card>
+                <mat-card-header style="background-color: blue; color: cornsilk;">
+                    <mat-card-title style="margin: 8px;">Add Product Details</mat-card-title>
+                </mat-card-header>
+             
+                <mat-card-content>
+                    <br>
+
+
+           <div class="row">
+    <div class="col-md-4" >
+    <img [src]="url ? url : 'https://www.w3schools.com/howto/img_avatar.png'"  style="width: 100%px; height: 100px;"> <br>
+    <div class="hover-text">Upload Product Image</div>
+     <input type='file' (change)="onSelectFile($event)" formControlName="ProductImage" style="width: 230px;" required>
+     <mat-error *ngIf="hasError('ProductImage', 'required')">Product Image is required</mat-error>
+     </div>
+
+
+
+     <div class="col-md-8">
+        <div class="row">
+            
+                <mat-form-field>
+                    <input matInput formControlName="ProductName" placeholder="Product Name" required>
+                    <mat-error *ngIf="hasError('ProductName', 'required')">Product Name is required</mat-error>
+                </mat-form-field>
+         
+
+        </div>
+
+
+        <div class="row">
+            
+                <mat-form-field>
+                    <textarea matInput formControlName="ProductDescription" placeholder="Product Description" rows="2" required></textarea>
+                    <mat-error *ngIf="hasError('ProductDescription', 'required')">Product Description is required</mat-error>
+         
+                </mat-form-field>
+            
+        </div>
+
+        <div class="row">
+          
+                <mat-form-field>
+                    <input matInput formControlName="price" placeholder="price" required>
+                        <mat-error *ngIf="hasError('price', 'required')">Price is required</mat-error>
+                </mat-form-field>
+         
+        </div>
+
+        <div class="row">          
+            <mat-radio-group aria-label="Select an option" formControlName="ProductStock" (click)="productStock($event)">
+                <label >Product</label>
+
+                <mat-radio-button value="In Stock" class="stock">InStock</mat-radio-button>
+                <mat-radio-button value="Out Stock" >OutStock</mat-radio-button>
+
+            <div *ngIf="stock" class="validgender">Product Stock is required</div>
+
+            </mat-radio-group>              
+            </div>
+
+          <br>
+
+
+        <div class="row" >
+        <div class="col-md-2  cancelbutton">
+            <button mat-stroked-button color="warn" (click)="onCancel($event)"
+                class="save buttontop" style="left: 313px;">Cancel</button>
+        </div>
+        <div class="col-md-2">
+            <button mat-raised-button color="primary" class="save" (click)="onSave()" style="left: 325px;"
+                >Save</button>
+        </div>
+        </div>
+           
+
+
+     </div>
+</div>
+
+             
+
+               </mat-card-content>
+            </mat-card>
+        </form>
+    </div>
+</div>

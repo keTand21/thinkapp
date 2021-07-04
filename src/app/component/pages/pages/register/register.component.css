@@ -1,0 +1,12 @@
+mat-slider {
+    width: 444px;
+  }
+  .savebutton{
+    left: 325px
+  }
+  .stock{
+    margin: 5px;
+  }
+  .validgender{
+    color: red; font-size: 12px;
+  }
